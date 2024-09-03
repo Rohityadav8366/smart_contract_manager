@@ -15,11 +15,16 @@ public class Contact {
     private String email;
     private String phone;
     private String image;
-    @Column(length=50000)
+    @Column(length=1000)
     private String description;
 
     @ManyToOne()
+    @JoinColumn(name="user_id")
     private User user;
+
+    public Contact() {
+        super();
+    }
 
     public int getcId() {
         return cId;
