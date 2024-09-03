@@ -2,6 +2,7 @@ package com.smartConManager.smartContectManager.model;
 
 import jakarta.persistence.*;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +22,7 @@ public class User {
     @Column(length = 500)
     private String about;
 
+    @OneToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 private List<Contact> contacts=new ArrayList<>();
 
 //    public User(int id, String name, String email, String password, String role, boolean enabled, String imageUrl, String about) {

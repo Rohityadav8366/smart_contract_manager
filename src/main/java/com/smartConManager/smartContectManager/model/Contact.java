@@ -18,6 +18,9 @@ public class Contact {
     @Column(length=50000)
     private String description;
 
+    @ManyToOne()
+    private User user;
+
     public int getcId() {
         return cId;
     }
@@ -80,5 +83,13 @@ public class Contact {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
