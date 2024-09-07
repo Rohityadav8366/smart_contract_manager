@@ -25,16 +25,6 @@ public class User {
     @OneToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY,mappedBy = "user")
 private List<Contact> contacts=new ArrayList<>();
 
-//    public User(int id, String name, String email, String password, String role, boolean enabled, String imageUrl, String about) {
-//        this.id = id;
-//        this.name = name;
-//        this.email = email;
-//        this.password = password;
-//        this.role = role;
-//        this.enabled = enabled;
-//        this.imageUrl = imageUrl;
-//        this.about = about;
-//    }
 
     public User() {
         super();
