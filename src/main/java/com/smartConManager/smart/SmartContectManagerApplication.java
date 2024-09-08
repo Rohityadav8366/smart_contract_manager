@@ -1,4 +1,4 @@
-package com.smartConManager.smartContectManager;
+package com.smartConManager.smart;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,7 +8,7 @@ public class SmartContectManagerApplication {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(SmartContectManagerApplication.class, args);
+ 		SpringApplication.run(SmartContectManagerApplication.class, args);
 		
 	}
 }

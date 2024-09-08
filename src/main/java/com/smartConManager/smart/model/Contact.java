@@ -1,4 +1,4 @@
-package com.smartConManager.smartContectManager.model;
+package com.smartConManager.smart.model;
 
 import jakarta.persistence.*;
 import org.hibernate.Length;
