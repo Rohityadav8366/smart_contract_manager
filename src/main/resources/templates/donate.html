@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang ="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>this is home page</title>
+	<!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+</head>
+<body>
+	<section class ="donatebanner d-flex justify-content align-items-center">
+	<div class="text-center">
+	    <h1 class="font-weight-bold text-center">PaymentTesting</h1>
+	    <p> Testing payment integration
+	    </p>
+		<form>
+		  <div class="form-group">
+		    <h3 for="formGroupExampleInput">Donate Us</h3>
+		    <input id="payment_field" type="text" class="form-control" placeholder="amount INR">
+		  </div>
+		  <div>
+		  <button type="button" onclick="paymentStart()" class="btn bg-primary btn mt-3">Pay</button>
+		  </div>
+		</form>
+	    
+	</div>
+	</section>
+</body>
+</html>
