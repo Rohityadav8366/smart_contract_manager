@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -62,6 +63,17 @@ public class UserController {
 		
 		
 		return order.toString();
+	}
+	@PostMapping("/update_order")
+	public ResponseEntity<?> updateOrder(@RequestBody Map<String,Object> data){
+		
+		MyOrder myorder=this.myPaymentOrderRepo.findByOrderId(data.get("order_id").toString());
+		
+		myorder.setPaymentId(data.get("payment_id").toString());
+		myorder.setStatus(data.get("status").toString());
+		this.myPaymentOrderRepo.save(myorder);
+		System.out.println("data");
+		return ResponseEntity.ok("");
 	}
 
 }

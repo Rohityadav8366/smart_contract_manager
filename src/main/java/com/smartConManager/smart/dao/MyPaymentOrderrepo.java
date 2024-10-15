@@ -6,4 +6,7 @@ import com.smartConManager.smart.model.MyOrder;
 
 public interface MyPaymentOrderrepo extends JpaRepository<MyOrder, Long> {
 
+	public MyOrder findByOrderId(String orderId);
+
+	//public MyOrder findByOrderId1(String string);
 }
